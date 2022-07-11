@@ -5,6 +5,7 @@ function findMedianSortedArrays(nums1, nums2) {
     let median = 0
     let sortedNums = nums1.concat(nums2).sort()
     console.log(sortedNums)
+    
     if(sortedNums.length % 2 === 1){
         median = sortedNums [Math.floor(sortedNums.length/2)]
     }

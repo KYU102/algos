@@ -7,7 +7,7 @@ function addDigits (num){
         return num 
     }
     
-    while (newNum > 10 ){
+    while (newNum > 9 ){
         let numsArr = Array.from(String(newNum), Number)
         for (let i = 0; i < numsArr.length; i++) {
             subNum += numsArr[i]
@@ -19,4 +19,4 @@ function addDigits (num){
     return newNum
 }
 
-console.log(addDigits(2))
+console.log(addDigits(15))

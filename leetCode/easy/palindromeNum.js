@@ -1,4 +1,4 @@
-let num = 121
+let num = 12132456
 
 function isPalindrome (x) {
     let reversed = x.toString().split("").reverse().join("")

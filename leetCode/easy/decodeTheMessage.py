@@ -1,19 +1,20 @@
 
 def decodeMessage(key, str):
-    key = key.replace(" ","")
+    key.replace(" ","")
     abcKey = 'abcdefghijklmnopqrstuvwxyz'
     codeDict = {}
-    for letter in range(26):
-        codeDict[abcKey[letter]] = key[letter]
+    for letter in range(len(key)):
+        if key[letter] not in codeDict:
+            codeDict[abcKey[letter]] = key[letter]
 
-    index = 0
+
     davincisCode = ""
     
-    while(str[index]):
+    for index in range(len(str)):
         if str[index] == " ":
             davincisCode += " "
         else:
-            davincisCode = davincisCode + codeDict[str[index]]
+            davincisCode += codeDict[str[index]]
 
 
     return davincisCode

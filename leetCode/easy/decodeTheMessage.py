@@ -14,6 +14,7 @@ def decodeMessage(key, str):
             davincisCode += " "
         else:
             davincisCode = davincisCode + codeDict[str[index]]
+        index+=1
 
 
     return davincisCode

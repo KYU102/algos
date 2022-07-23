@@ -5,9 +5,6 @@ def maxArea(height):
     max = 0
     area = 0
 
-    if (height == [1,1]):
-        return 1
-
     for left in range(len(height)):
         for right in range(left + 1, len(height)):
             if height[left] > height[right]:

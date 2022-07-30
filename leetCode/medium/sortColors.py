@@ -6,12 +6,12 @@ def sortColors(nums):
     for color in nums:
         counter[color] = counter.get(color, 0) + 1
 
-    for i in range(counter[0]):
-        result.append(0)
-    for i in range(counter[1]):
-        result.append(1)
-    for i in range(counter[2]):
-        result.append(2)
+    for num in range(3):
+        for counts in range(counter[num]):
+            result.append(num)
+
     return result
+
+
 
 print(sortColors([2,0,2,1,1,0]))

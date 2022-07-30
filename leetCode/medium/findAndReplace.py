@@ -7,10 +7,20 @@ def findAndReplace(words, pattern):
     indexer = 0
     answer = []
 
-    while indexer != len(pattern):
+
+    for i in range(len(pattern)):
+        if pattern[i] != pattern[i-1]:
+            decoder[i] = counter
+            counter = 1
+        else:
+            counter += 1 
+            decoder[i] = counter
+
+
         
+
     
-    
+        
     # print (decoder)
     # counter = 0
     # for word in words:

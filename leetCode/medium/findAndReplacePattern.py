@@ -1,6 +1,6 @@
-from collections import Counter
 
-def findAndReplace(words, pattern):
+
+def findAndReplacePattern(words, pattern):
     decoder= {}
     compDic = {}
     counter = 1
@@ -8,9 +8,12 @@ def findAndReplace(words, pattern):
     answer = []
 
     while indexer != len(pattern) + 1:
-        print(indexer)
+
         indexer += 1
-    
+
+        if decoder[indexer] != decoder[indexer-1]:
+            decoder[indexer] 
+
     # print (decoder)
     # counter = 0
     # for word in words:
@@ -27,4 +30,4 @@ def findAndReplace(words, pattern):
 
     return decoder
 
-print(findAndReplace(["abc","deq","mee","aqq","dkd","ccc"], "abb"))
+print(findAndReplacePattern(["abc","deq","mee","aqq","dkd","ccc"], "abb"))

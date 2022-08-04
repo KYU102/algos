@@ -1,12 +1,21 @@
 
 def largestOddNumber(num):
 
-    for i in range(len(num)):
-        print(i)
-        if int(num[i]) % 2 == 1:
-            print(i)
-            return num[:i]
-        
-    return num[:2]
+    num = int(num)
+    
 
-print(largestOddNumber("35427"))
+    while num > 0:
+        if num % 2 == 0:
+            num  = num//10
+        else:
+            return str(num)
+    
+    return ""
+    
+
+
+
+
+
+
+print(largestOddNumber("22223"))

@@ -1,6 +1,6 @@
-from collections import Counter
 
-def findAndReplace(words, pattern):
+
+def findAndReplacePattern(words, pattern):
     decoder= {}
     compDic = {}
     counter = 1
@@ -24,10 +24,17 @@ def findAndReplace(words, pattern):
         
 =======
     while indexer != len(pattern) + 1:
-        print(indexer)
+
         indexer += 1
+<<<<<<< HEAD
+
+        if decoder[indexer] != decoder[indexer-1]:
+            decoder[indexer] 
+
+=======
     
 >>>>>>> a1c021b3d51b95b637cf9d52ff421d7bade6b438:leetCode/medium/findAndReplacePattern.py
+>>>>>>> c25435c42859a2f4a01503220ad71961eb5a40ed
     # print (decoder)
     # counter = 0
     # for word in words:
@@ -44,4 +51,4 @@ def findAndReplace(words, pattern):
 
     return decoder
 
-print(findAndReplace(["abc","deq","mee","aqq","dkd","ccc"], "abb"))
+print(findAndReplacePattern(["abc","deq","mee","aqq","dkd","ccc"], "abb"))

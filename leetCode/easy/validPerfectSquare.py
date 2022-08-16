@@ -1,5 +1,4 @@
-from imghdr import tests
-from operator import truediv
+
 
 
 def isPerfectSquare(num) -> bool:

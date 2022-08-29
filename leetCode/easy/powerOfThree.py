@@ -1,13 +1,15 @@
 def isPowerOfThree(n):
 
-    power = 1
+    power = 0
     
-    while power <= n:
-        if power == n:
+    if n == 1: return True
+    if n < 3: return False
+    while 3**power <= n:
+        if 3**power == n:
             return True
-        power*=3
+        power+=1
     
     return False
 
-print(isPowerOfThree(27))
+print(isPowerOfThree(0))
 

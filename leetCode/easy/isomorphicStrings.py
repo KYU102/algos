@@ -4,17 +4,17 @@ def isIsomorphic(s, t):
     sDict = {}
     tDict = {}
 
-    if len(s) != len(t):
-        return False
+    for i, j in zip(s,t):
+        if i not in sDict and j not in tDict:
+            sDict[i] = j
+            tDict[j] = i
 
-    for i in s:
-        sDict[i] = sDict.get(i,0) + 1
-        
+        elif sDict.get(i) != j or tDict.get(j) != i:
+            return False
 
-    for j in t:
-        tDict[j] = tDict.get(j,0) + 1
-    
-    return tDict
+    return True
+
+
 
 
 print(isIsomorphic('egg', 'add'))

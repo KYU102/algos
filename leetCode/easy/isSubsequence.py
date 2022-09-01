@@ -10,16 +10,19 @@ def isSubsequence (str, test):
     # if  compareStr == str:
     #     return True
     # else: return False
-        if len(str) > len(test):return False
-        if len(str) == 0:return True
-        subsequence=0
-        for i in range(0,len(test)):
-            if subsequence <= len(str) -1:
-                print(str[subsequence])
-                if str[subsequence]==test[i]:
 
-                    subsequence+=1
-        return  subsequence == len(str) 
+    # -----------------------------------------------
+    #     if len(str) > len(test):return False
+    #     if len(str) == 0:return True
+    #     subsequence=0
+    #     for i in range(0,len(test)):
+    #         if subsequence <= len(str) -1:
+    #             print(str[subsequence])
+    #             if str[subsequence]==test[i]:
+
+    #                 subsequence+=1
+    #     return  subsequence == len(str) 
+    # -------------------------------------------------
 
 
 

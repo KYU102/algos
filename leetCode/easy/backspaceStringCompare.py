@@ -15,6 +15,7 @@ def backSpaceCompare(s,t):
         if letter != '#':
             tArr.append(letter)
 
+
     return sArr == tArr
 
 print(backSpaceCompare("ab##","c#d#"))

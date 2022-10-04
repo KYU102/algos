@@ -6,20 +6,28 @@
 def minionGameWinner(s):
     
     vowels = ['a','e','i','o','u','y','A','E','I','O','U','Y']
-    p1 = 0
-    p2 = 0
+    Stuart = 0
+    Kevin = 0
     index = 0
 
     while index < len(s):
         if s[index] not in vowels:
-            p1 += len(s) - index
+            Stuart += len(s) - index
         else:
-            p2 += len(s) - index
+            Kevin += len(s) - index
 
         index+=1
-        
-    return p2
+    
+    if Kevin == Stuart:
+        return 'Draw'
+    if Stuart > Kevin:
+        return 'Stuart {}'.format(Stuart)
+    else:
+        return 'Kevin {}'.format(Kevin)
 
-print(minionGameWinner('banana'))
+    
+
+
+print(minionGameWinner('BANAASA'))
 
 

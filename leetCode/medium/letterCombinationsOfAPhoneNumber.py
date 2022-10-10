@@ -1,7 +1,8 @@
-
+from itertools import combinations
 
 def letterCombiantions(digits):
-        numDict = {'2': "abc",
+        letters = {
+                '2': "abc",
                 '3': "def",
                 '4': "ghi",
                 '5': "jkl",
@@ -9,17 +10,21 @@ def letterCombiantions(digits):
                 '7': "pqrs",
                 '8': "tuv",
                 '9': "wxyz"
-        }
+                }
+        
+        res = []
 
-        lettersNeeded = []
+        def backTrack(i, curStr):
+                if len(curStr) == len(digits):
+                        res.append(curStr)
+                        return
 
-        possibleCombos = []
+                for char in letters[digits[i]]:
+                        backTrack(i+1, curStr + char)
+                
+        if digits:
+                backTrack(0,'')
 
-
-        for num in digits:
-                possibleCombos = numDict[num]
-
-        return possibleCombos
-
+        return res
 
 print(letterCombiantions("234"))
